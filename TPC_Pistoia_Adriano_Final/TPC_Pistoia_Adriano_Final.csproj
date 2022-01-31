@@ -105,6 +105,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ChangeLog.aspx" />
+    <Content Include="images\pencil.svg" />
+    <Content Include="OlvideMiContra.aspx" />
     <Content Include="PagMaterias.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -201,6 +204,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="ChangeLog.aspx.cs">
+      <DependentUpon>ChangeLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangeLog.aspx.designer.cs">
+      <DependentUpon>ChangeLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OlvideMiContra.aspx.cs">
+      <DependentUpon>OlvideMiContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OlvideMiContra.aspx.designer.cs">
+      <DependentUpon>OlvideMiContra.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PagMaterias.aspx.cs">
       <DependentUpon>PagMaterias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -283,6 +300,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

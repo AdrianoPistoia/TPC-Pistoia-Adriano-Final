@@ -24,7 +24,7 @@
                   </div>
 
                   <asp:Button ID="LoginSubmit" CssClass="btn btn-outline-light btn-lg px-5"  type="submit" runat="server" OnClick="LoginSubmit_Click"   Text="Login" />
-                    <p class="small mb-3 pb-lg-2"><a class="text-white-50" href="#!">Olvido su contraseña?</a></p>
+                    <p class="small mb-3 pb-lg-2"><a class="text-white-50" href="/OlvideMiContra.aspx">Olvido su contraseña?</a></p>
                 </div>
 
                 <!--<div>

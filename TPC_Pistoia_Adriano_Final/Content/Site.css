@@ -10,7 +10,9 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
-
+.input shdw:hover {
+    background-color: #373B3E;
+}
 /* Set widths on the form inputs since otherwise they're 100% wide */
 input,
 select,

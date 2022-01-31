@@ -9,33 +9,69 @@ namespace  DataManager
 {
     public class SQLAction
     {
+        public string Recuperacion_Contra(string emaildir)
+        {
+            
+                SQLTrader trader = new SQLTrader();
+            try
+            {
+
+                trader.setearConsulta(Diccionario.CONTRASEÑA_POR_EMAIL);
+                trader.setearParametro("@email", emaildir );
+                trader.ejecutarAccion();
+
+            if(trader.Lector.HasRows)
+                {
+                   
+                    return trader.Lector["contrasenia"].ToString();
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+
+            }
+            finally
+            {
+                trader.cerrarConexion();
+            }
+        }
+    
         public List<Materia> ListarMateriasDelUser(Usuario user)
         {
+            
             List<Materia> lista = new List<Materia>();  
             SQLTrader trader = new SQLTrader();
             try
             {
-                Materia mat  = new Materia();
 
-                trader.setearConsulta   (Diccionario.LISTAR_MATERIAS_DE_USUARIO);
-                trader.setearParametro  ("@usuario", user._idUsuario);
-                trader.ejecutarLectura  ();
+                
+
+                trader.setearConsulta(Diccionario.LISTAR_MATERIAS_DE_USUARIO);
+                trader.setearParametro("@usuario", user._idUsuario);
+                trader.ejecutarLectura();
 
                 while (trader.Lector.Read())
                 {
-                    mat._nombreMateria  = (string)  trader.Lector["nombreMateria"];
-                    mat._idMateria      = (int)     trader.Lector["idMateria"];
-                    mat._idProfesor     = (int)     trader.Lector["idProfesor"];
-                    mat._nota           = (int)     trader.Lector["nota"];
-                    mat._estado         = (bool)    trader.Lector["estado"];
+                    Materia mat = new Materia();
+                    mat._nombreMateria = (string)trader.Lector["nombreMateria"];
+                    mat._idMateria = (int)trader.Lector["idMateria"];
+                    mat._profesor = (string)trader.Lector["profesor"];
+                    mat._nota = (int)trader.Lector["nota"];
+                    mat._estado = (bool)trader.Lector["estado"];
                     lista.Add(mat);
-                    return lista;
+                    
                 }
                 return lista;
             }
             catch (Exception ex)
             {
+
                 throw ex;
+            
             }
             finally
             {

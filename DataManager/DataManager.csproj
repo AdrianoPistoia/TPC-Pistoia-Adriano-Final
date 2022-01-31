@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Diccionario.cs" />
+    <Compile Include="EmailService.cs" />
     <Compile Include="SQLAction.cs" />
     <Compile Include="SQLTrader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
