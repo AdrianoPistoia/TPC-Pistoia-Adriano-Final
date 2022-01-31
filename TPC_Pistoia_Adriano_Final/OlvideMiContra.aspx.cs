@@ -44,8 +44,8 @@ namespace TPC_Pistoia_Adriano_Final
         {
             SQLAction act = new SQLAction();
             string txbVal = txb_Codigo.Text;
-            string contra = new string();
-            contra = act.Recuperacion_Contra(txtEmail.Text);
+            
+            string contra = act.Recuperacion_Contra(txtEmail.Text);
             
             if (Int32.Parse(txbVal) == (int)Session["Codigo"])
             {
@@ -80,6 +80,14 @@ namespace TPC_Pistoia_Adriano_Final
 
 
                 emailService.enviarContra(txtEmail.Text,contra);
+                try
+                {
+                    emailService.enviarEmail();
+                }
+                catch (Exception ex)
+                {
+                    Session.Add("error", ex);
+                }
             }
             ///pop-up "el email ingresado no existe en nuestra base de datos, intente devuelta con otro o corrige el mismo!"
         }

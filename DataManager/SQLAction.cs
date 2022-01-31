@@ -18,15 +18,14 @@ namespace  DataManager
 
                 trader.setearConsulta(Diccionario.CONTRASEÑA_POR_EMAIL);
                 trader.setearParametro("@email", emaildir );
-                trader.ejecutarAccion();
+                trader.ejecutarLectura();
 
-            if(trader.Lector.HasRows)
-                {
-                   
-                    return trader.Lector["contrasenia"].ToString();
-                }
 
-                return null;
+                trader.Lector.Read();
+                    return trader.Lector["Contra"].ToString();
+                
+
+                
             }
             catch (Exception ex)
             {

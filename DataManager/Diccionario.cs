@@ -11,7 +11,7 @@ namespace DataManager
         public static string CONEXION_SERVER = "server =.\\SQLEXPRESS; database=SystemaDeDatos; integrated security = true";
         public static string LISTAR_USUARIOS = "SELECT U.legajo, U.nombreCompleto, U.email, P.perfil as Perfil, U.contrasenia FROM Usuario AS U JOIN Perfil AS P ON U.idPerfil = P.idPerfil WHERE U.idPerfil = P.idPerfil AND U.estado = 1";
         public static string LISTAR_MATERIAS_DE_USUARIO = "SELECT M.idMateria, M.nombreMateria, M.nota, M.estado, M.horario, (SELECT U.nombreCompleto FROM Usuario AS U WHERE U.idUsuario = M.idProfesor) AS profesor FROM MateriaXUsuario AS MxU JOIN Materia AS M ON MxU.idMateria = M.idMateria JOIN Usuario AS U ON MxU.idUsuario = U.idUsuario WHERE M.estado != 0 AND U.idPerfil = 3 AND U.idUsuario =  @usuario";
-        public static string CONTRASEÑA_POR_EMAIL = "SELECT U.contrasenia as contrasenia FROM Usuario AS U WHERE U.email = @email";
+        public static string CONTRASEÑA_POR_EMAIL = "SELECT U.contrasenia as Contra FROM Usuario AS U WHERE U.Email = @email";
         //public static string WHERE_FAVORITOS_TRUE = " where P.Favorito = 1";
         //public static string WHERE_FAVORITOS_FALSE = " where P.Favorito = 0";
 
