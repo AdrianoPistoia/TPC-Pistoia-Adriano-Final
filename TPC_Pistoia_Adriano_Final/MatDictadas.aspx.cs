@@ -9,20 +9,27 @@ using DataSys;
 
 namespace TPC_Pistoia_Adriano_Final
 {
-    public partial class ChangeLog : System.Web.UI.Page
+    public partial class MatDictadas : System.Web.UI.Page
     {
         public Usuario usuario = new Usuario();
         protected void Page_Load(object sender, EventArgs e)
         {
-            SQLAction trader = new SQLAction();
+            SQLAction Manager = new SQLAction();
 
             usuario = (Usuario)Session["Usuario"];
             if (Session["Usuario"] == null)
             {
                 Response.Redirect("/Login.aspx");
             }
-            tbl_repeaterSentencias.DataSource = trader.listarBacklog();
-            tbl_repeaterSentencias.DataBind();
+            List<Materia> lst_materiasDelUser = Manager.ListarMateriasDelUser(usuario);
+            tbl_repeaterMaterias.DataSource = lst_materiasDelUser;
+            tbl_repeaterMaterias.DataBind();
+
+        }
+
+        protected void cambiarTest_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

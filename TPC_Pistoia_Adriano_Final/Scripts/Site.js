@@ -14,7 +14,7 @@ function FiltoParaProfes() {
     }
 }
 
-function editarNotas () {
+function editarNotas() {
     if (document.getElementById("flag").getAttribute("flag") == null) {
         document.getElementById("flag").setAttribute("flag", "true")
     }
@@ -32,9 +32,29 @@ function editarNotas () {
             document.getElementsByClassName("inputNotas")[i].setAttribute("disabled", "true");
             document.getElementsByClassName("inputNotas")[i].style = "background-color:#212529;outline:none;border:0px";
             document.getElementById("editButton").innerText = "Editar Notas";
+
         }
     }
-    //alert("esta en " + document.getElementById("flag").getAttribute("flag"))
 }
+
+function verificacion() {
+    txb_legajo = document.getElementsByClassName("legajo");
+    btn_login = document.getElementsByClassName("login");
+    if (txb_legajo.length == 5) {
+        btn_login
+    }
+}
+function translateValue() {
+    this.setAttribute("value", this.value);
+}
+window.onload = function () {
+    
+    elements = document.getElementsByClassName("inputNotas");
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("blur", translateValue, true);
+    }
+};
+
+
 
 

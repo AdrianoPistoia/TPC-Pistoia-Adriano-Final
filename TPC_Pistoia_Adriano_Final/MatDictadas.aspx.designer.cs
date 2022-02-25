@@ -11,16 +11,16 @@ namespace TPC_Pistoia_Adriano_Final
 {
 
 
-    public partial class ChangeLog
+    public partial class MatDictadas
     {
 
         /// <summary>
-        /// tbl_repeaterSentencias control.
+        /// tbl_repeaterMaterias control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater tbl_repeaterSentencias;
+        protected global::System.Web.UI.WebControls.Repeater tbl_repeaterMaterias;
     }
 }

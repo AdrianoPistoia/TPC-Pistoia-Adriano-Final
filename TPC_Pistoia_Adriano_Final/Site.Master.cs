@@ -21,5 +21,10 @@ namespace TPC_Pistoia_Adriano_Final
         {
             
         }
+        protected void CerrarSesion_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Response.Redirect("/Login.aspx", true);
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="OlvideMiContra.aspx.cs" Inherits="TPC_Pistoia_Adriano_Final.OlvideMiContra" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="cambiarContra.aspx.cs" Inherits="TPC_Pistoia_Adriano_Final.cambiarContra" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="row">
         <div class="col-2"></div>
@@ -21,6 +21,10 @@
             <asp:Panel runat="server" ID="Panel1" CssClass="mb-3">
                 <label class="form-label">Codigo</label>
                 <asp:TextBox TextMode="number" runat="server" ID="txb_Codigo" cssclass="form-control"/>
+            </asp:Panel>
+            <asp:Panel runat="server" ID="Panel2" CssClass="mb-3">
+                <label class="form-label">Nueva Contraseña</label>
+                <asp:TextBox TextMode="password" placeholder="Maximo 20 caracteres." runat="server" ID="txb_contra" cssclass="form-control"/>
             </asp:Panel>
             <asp:Button Text="Aceptar" CssClass="btn btn-primary" OnClick="btnAceptar_Click" ID="btnAceptar" runat="server" />
         </div>

@@ -19,6 +19,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{FDDE0526-2E25-4C94-814B-97764D2F9F8B}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\..\Desktop\DBMapping.sql = ..\..\..\Desktop\DBMapping.sql
+		..\..\..\Documents\SQL Server Management Studio\SQLQuery3.sql = ..\..\..\Documents\SQL Server Management Studio\SQLQuery3.sql
 	EndProjectSection
 EndProject
 Global

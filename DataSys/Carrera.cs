@@ -4,11 +4,11 @@ using System.Text;
 
 namespace DataSys
 {
-    class Carrera
+    public class Carrera
     {
-        int     _idCarrera      { get; set; }
-        string  _nombreCarrera  { get; set; }
-        string  _categoria      { get; set; }
-        bool    _estado         { get; set; }
+        public int      _idCarrera      { get; set; }
+        public string   _nombreCarrera  { get; set; }
+        public string   _categoria      { get; set; }
+        public bool     _estado         { get; set; }
     }
 }

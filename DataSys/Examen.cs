@@ -4,12 +4,13 @@ using System.Text;
 
 namespace DataSys
 {
-    class Examen
+    public class Examen
     {
-        int     _idExamen   { get; set; }
-        int     _idMateria  { get; set; }
-        string  _horario    { get; set; }
-        int     _nota       { get; set; }
-        bool    _estado     { get; set; }
+        public int          _idExamen       { get; set; }
+        public int          _idMateria      { get; set; }
+        public string       _nombreMateria  { get; set; }
+        public TimeSpan     _horario        { get; set; }
+        public int          _nota           { get; set; }
+        public bool         _estado         { get; set; }
     }
 }

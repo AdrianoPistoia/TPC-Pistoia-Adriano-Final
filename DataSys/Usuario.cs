@@ -11,6 +11,7 @@ namespace DataSys
         public string       _nombreCompleto     { get; set; }
         public string       _email              { get; set; }
         public string       _perfil             { get; set; }
+        public int          _idPerfil           { get; set; }
         public string       _contra             { get; set; }
     }
 }
